@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hangman Game</h1>
+    <div id="welcomeMessage" class="welcome-message hide">
+      <p>Play on, <span id="playerName"></span>!</p>
+    </div>
+    <div id="nameEntry" class="name-entry">
+      <input type="text" id="nameInput" placeholder="Enter your name">
+      <button id="submitNameBtn" class="action-btn">Submit</button>
+    </div>
+    <div id="wordDisplay" class="word-display"></div>
+    <div id="hangmanSVG">
+      <svg width="200" height="200" viewBox="0 0 200 200" id="hangman">
+        <!-- Gallows -->
+        <line x1="50" y1="150" x2="150" y2="150" stroke="black" stroke-width="4"/>
+        <line x1="100" y1="150" x2="100" y2="20" stroke="black" stroke-width="4"/>
+        <line x1="100" y1="20" x2="150" y2="20" stroke="black" stroke-width="4"/>
+        <line x1="150" y1="20" x2="150" y2="40" stroke="black" stroke-width="4"/>
+        
+        <!-- Head (hidden initially) -->
+        <circle cx="150" cy="50" r="10" stroke="black" stroke-width="3" fill="none" class="hide"/>
+        <!-- Body -->
+        <line x1="150" y1="60" x2="150" y2="100" stroke="black" stroke-width="3" class="hide"/>
+        <!-- Arms -->
+        <line x1="150" y1="70" x2="140" y2="90" stroke="black" stroke-width="3" class="hide"/>
+        <line x1="150" y1="70" x2="160" y2="90" stroke="black" stroke-width="3" class="hide"/>
+        <!-- Legs -->
+        <line x1="150" y1="100" x2="140" y2="130" stroke="black" stroke-width="3" class="hide"/>
+        <line x1="150" y1="100" x2="160" y2="130" stroke="black" stroke-width="3" class="hide"/>
+      </svg>
+    </div>
+    <div id="keyboard" class="keyboard"></div>
+    <div id="celebration" class="celebration hide">
+      <h2>Congratulations! You guessed the word!</h2>
+    </div>
+    <div id="gameOver" class="game-over hide">
+      <h2>Game Over! The word was <span id="correctWord"></span>.</h2>
+    </div>
+    <div id="message" class="message hide"></div>
+    <button id="nextWordBtn" class="action-btn hide">Next Word</button>
+    <button id="restartGameBtn" class="action-btn hide">Restart Game</button>
+    <button id="newGameBtn" class="action-btn hide">New Game</button>
+    <div class="scoreboard">
+      <p>Total Games: <span id="totalGames">0</span></p>
+      <p>Wins: <span id="wins">0</span></p>
+      <p>Losses: <span id="losses">0</span></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

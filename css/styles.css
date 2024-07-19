@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.word-display {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.keyboard button {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.action-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show-1 .hide:nth-child(5) { visibility: visible; animation: fadeIn 0.5s ease-in; }
+.show-2 .hide:nth-child(6) { visibility: visible; animation: fadeIn 0.5s ease-in; }
+.show-3 .hide:nth-child(7) { visibility: visible; animation: fadeIn 0.5s ease-in; }
+.show-4 .hide:nth-child(8) { visibility: visible; animation: fadeIn 0.5s ease-in; }
+.show-5 .hide:nth-child(9) { visibility: visible; animation: fadeIn 0.5s ease-in; }
+.show-6 .hide:nth-child(10) { visibility: visible; animation: fadeIn 0.5s ease-in; }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.celebration {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: green;
+    animation: celebrate 2s ease-in-out;
+}
+
+.game-over {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: red;
+    animation: gameOverEffect 2s ease-in-out;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: orange;
+}
+
+.guessed {
+    background-color: lightgrey;
+    cursor: not-allowed;
+}
+
+.name-entry {
+    margin-bottom: 20px;
+}
+
+.name-entry input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.name-entry button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.name-entry button:hover {
+    background-color: #218838;
+}
+
+.welcome-message {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
